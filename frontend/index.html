@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Traveltips </title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">Travel<span>tips</span></div>
+  <ul class="nav-links">
+    <li><a href="#">Lugares</a></li>
+    <li><a href="#">Tips</a></li>
+    <li><a href="#">Mapa</a></li>
+    <li><a href="#">Sobre nós</a></li>
+  </ul>
+  <a href="#" class="nav-cta">Planeje sua viagem</a>
+</nav>
+
+<!-- CAROUSEL -->
+<div class="carousel-wrap" id="carousel">
+
+  <div class="carousel-track" id="carouselTrack">
+
+    <div class="carousel-slide active">
+      <div class="slide-bg s0" style="background-image: url('img/capas/ilhagranderoot.jpg');"></div>
+      <div class="slide-overlay"></div>
+      <div class="slide-destino">ILHA GRANDE</div>
+      <div class="slide-content">
+        <p class="slide-kicker"></p>
+        <h2 class="slide-title">Dias no paraíso</h2>
+        <p class="slide-desc">Utopia na Ilha grande.</p>
+        <a class="slide-cta" href="#">Ler tips <span class="slide-cta-arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="carousel-slide">
+      <div class="slide-bg s1" style="background-image: url('img/barilochecapa.png');"></div>
+      <div class="slide-overlay"></div>
+      <div class="slide-destino-bariloche">BARILOCHE</div>
+      <div class="slide-content">
+        <p class="slide-kicker"></p>
+        <h2 class="slide-title">Patagônia Argentina </h2>
+        <p class="slide-desc">Dias nevados, ski, vinho e vivência nas montanhas.</p>
+        <a class="slide-cta" href="#">Ler relato <span class="slide-cta-arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="carousel-slide">
+      <div class="slide-bg s2"style="background-image: url('img/Saothomecapa.png');"></div>
+      <div class="slide-overlay"></div>
+      <div class="slide-destino"></div>
+      <div class="slide-content">
+        <p class="slide-kicker">Sao Thome · Novembro 2023</p>
+        <h2 class="slide-title">Expedição mística</h2>
+        <p class="slide-desc">Dias mísitcos sentindo a magia da vida</p>
+        <a class="slide-cta" href="#">Ler relato <span class="slide-cta-arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="carousel-slide">
+      <div class="slide-bg s3"style="background-image: url('img/cristocapa.png');"></div>
+      <div class="slide-overlay"></div>
+      <div class="slide-destino-rj">RIO DE JANEIRO</div>
+      <div class="slide-content">
+        <p class="slide-kicker">RJ ·021</p>
+        <h2 class="slide-title">RJ fora do óbvio </h2>
+        <p class="slide-desc">Dicas cariocas para aproveitar a cidade maravilhosa.</p>
+        <a class="slide-cta" href="#">Ler relato <span class="slide-cta-arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="carousel-slide">
+      <div class="slide-bg s4" style="background-image: url('img/marrakeshcapa.png');"></div>
+      <div class="slide-overlay"></div>
+      <div class="slide-destino-marrakesh">MARRAKESH</div>
+      <div class="slide-content">
+        <p class="slide-kicker">Marrakesh - Maio 2026</p>
+        <h2 class="slide-title">Jogados na cidade vermelha</h2>
+        <p class="slide-desc">Cultura pulsante, arquiterura milenar, gastronomia única e muitas mais, embarque nessa imersão a Marrakesh.</p>
+        <a class="slide-cta" href="#">Ler relato <span class="slide-cta-arrow">→</span></a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Arrows -->
+  <button class="carousel-arrow prev" id="prevBtn" aria-label="Slide anterior">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+  </button>
+  <button class="carousel-arrow next" id="nextBtn" aria-label="Próximo slide">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+  </button>
+
+  <!-- Counter -->
+  <div class="slide-counter" id="slideCounter">01 / 05</div>
+
+  <!-- Dots -->
+  <div class="carousel-dots" id="dotsWrap">
+    <div class="dot active" data-i="0"></div>
+    <div class="dot" data-i="1"></div>
+    <div class="dot" data-i="2"></div>
+    <div class="dot" data-i="3"></div>
+    <div class="dot" data-i="4"></div>
+  </div>
+
+  <!-- Progress bar -->
+  <div class="carousel-progress" id="progressBar"></div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-text">
+    <p class="hero-kicker">Diário de bordo</p>
+    <h1>O mundo é grande,<br>a vida é <em>uma</em></h1>
+    <p class="hero-sub">Crônicas de quem gosta de conhecer o mundo, histórias e experiêcias para inspirar.</p>
+    <div class="hero-actions">
+      <a href="#posts" class="btn-primary">Ler tips</a>
+      <a href="#mapa" class="btn-ghost">Ver mapa de viagens →</a>
+    </div>
+    <div class="hero-count">
+      <div class="count-item">
+        <span class="count-num">8</span>
+        <span class="count-label">lugares ao redor</span>
+      </div>
+      <div class="count-item">
+        <span class="count-num">7</span>
+        <span class="count-label">Relatos publicados</span>
+      </div>
+      <div class="count-item">
+        <span class="count-num">3</span>
+        <span class="count-label"> viajantes parceiros</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-image">
+    <div class="hero-deco-1"></div>
+    <div class="hero-deco-2"></div>
+    <div class="hero-featured-card">
+      <div class="featured-img">
+        <div class="featured-img-inner">🗼</div>
+        <div class="featured-img-overlay">
+          <span class="featured-tag">✦destaque</span>
+        </div>
+      </div>
+      <div class="featured-body">
+        <h3>Abraão e Aventureiro : Mesma ilha outra vibe, o que ninguém te conta sobre</h3>
+        <div class="featured-meta">
+          <div class="avatar">VR</div>
+          <span>Você</span>
+          <span style="color:var(--ink-faint)">·</span>
+          <span>8 min de leitura</span>
+          <span style="color:var(--ink-faint)">·</span>
+          <span>Portugal</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- POSTS -->
+<section id="posts">
+  <div class="section-header">
+    <h2 class="section-title">Últimas viagens</h2>
+    <a href="#" class="section-link">Ver todos os relatos →</a>
+  </div>
+  <div class="posts-grid">
+    <div class="post-card">
+      <div class="post-card-img c2">🏔️</div>
+      <div class="post-card-body">
+        <span class="post-tag">Montanha</span>
+        <h3>Patagônia Argentina: snowboard, montanhas nevadas e silêncio</h3>
+        <p>Entregue ao novo, admirando a imponência das montanhas com a sensação de estar desbloqueando o mundo.</p>
+        <div class="post-card-footer"><div class="avatar">VR</div><span>Jota</span><span style="color:var(--ink-faint)">·</span><span>12 min</span><span style="color:var(--ink-faint)">·</span><span>Argentina</span></div>
+      </div>
+    </div>
+    <div class="post-card">
+      <div class="post-card-img c3">🏛️</div>
+      <div class="post-card-body">
+        <span class="post-tag">Cultura</span>
+        <h3>Marrocos 40 graus: souks, deserto e cachoeiras</h3>
+        <p>Marrakesh entre  cachoeiras e deserto entre a cidade vermelha</p>
+        <div class="post-card-footer"><div class="avatar">VR</div><span>Gabriel</span><span style="color:var(--ink-faint)">·</span><span>9 min</span><span style="color:var(--ink-faint)">·</span><span>Marrocos</span></div>
+      </div>
+    </div>
+    <div class="post-card">
+      <div class="post-card-img c4">🌸</div>
+      <div class="post-card-body">
+        <span class="post-tag">Montanha</span>
+        <h3>São Thomé das letras: a magia da montanha</h3>
+        <p>Cachoeiras, poços, vistas deslumbrantes com a cidade mística de MG.</p>
+        <div class="post-card-footer"><div class="avatar">VR</div><span>Jota</span><span style="color:var(--ink-faint)">·</span><span>15 min</span><span style="color:var(--ink-faint)">·</span><span>Minas</span></div>
+      </div>
+    </div>
+    <div class="post-card">
+      <div class="post-card-img c5">🌅</div>
+      <div class="post-card-body">
+        <span class="post-tag">América do Sul</span>
+        <h3>Bolívia: altitude, sal e cores que não existem em tela</h3>
+        <p>O Salar de Uyuni às 5h da manhã, quando ainda não chegou ninguém.</p>
+        <div class="post-card-footer"><div class="avatar" style="background:#fef3e2;color:#b07000">RM</div><span>Rafael Melo</span><span style="color:var(--ink-faint)">·</span><span>10 min</span><span style="color:var(--ink-faint)">·</span><span>Bolívia</span></div>
+      </div>
+    </div>
+    <div class="post-card">
+      <div class="post-card-img c6">🏝️</div>
+      <div class="post-card-body">
+        <span class="post-tag">Oceano</span>
+        <h3>Ilha de Páscoa: o isolamento mais bonito do planeta</h3>
+        <p>5 horas de avião do Chile, 26 Moais e zero arrependimento.</p>
+        <div class="post-card-footer"><div class="avatar">VR</div><span>Você</span><span style="color:var(--ink-faint)">·</span><span>11 min</span><span style="color:var(--ink-faint)">·</span><span>Chile</span></div>
+      </div>
+    </div>
+    <div class="post-card">
+      <div class="post-card-img c1">🕌</div>
+      <div class="post-card-body">
+        <span class="post-tag">Europa</span>
+        <h3>Granada em 48h: Alhambra, tapas e flamenco às 2h</h3>
+        <p>A Ju foi por 2 dias e ficou 10. A Espanha tem esse poder sobre nós.</p>
+        <div class="post-card-footer"><div class="avatar" style="background:#f0e8f5;color:#7B59A6">JS</div><span>Juliana S.</span><span style="color:var(--ink-faint)">·</span><span>7 min</span><span style="color:var(--ink-faint)">·</span><span>Espanha</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<section id="mapa" class="map-section" style="padding:0">
+  <div style="padding:3.5rem 3rem 1.5rem">
+    <div class="section-header" style="margin-bottom:0">
+      <div>
+        <h2 class="section-title">Mapa de viagens</h2>
+        <p style="font-size:0.85rem;color:var(--ink-muted);margin-top:0.3rem">Todos os destinos visitados, num só lugar</p>
+      </div>
+      <a href="#" class="section-link">Ver mapa completo →</a>
+    </div>
+  </div>
+  <div class="map-inner" style="margin-top:1.5rem">
+    <div class="map-sidebar">
+      <h3>Destinos</h3>
+      <p>Clique para ver o relato</p>
+      <ul class="place-list" id="placeList">
+        <li class="place-item active"><span class="place-dot" style="background:#2D6A9F"></span><span class="place-name">Lisboa</span><span class="place-country">Portugal</span></li>
+        <li class="place-item"><span class="place-dot" style="background:#7B9E4E"></span><span class="place-name">Patagônia</span><span class="place-country">Chile</span></li>
+        <li class="place-item"><span class="place-dot" style="background:#C84B2F"></span><span class="place-name">Marrakesh</span><span class="place-country">Marrocos</span></li>
+        <li class="place-item"><span class="place-dot" style="background:#9B59B6"></span><span class="place-name">Kyoto</span><span class="place-country">Japão</span></li>
+        <li class="place-item"><span class="place-dot" style="background:#E67E22"></span><span class="place-name">Uyuni</span><span class="place-country">Bolívia</span></li>
+        <li class="place-item"><span class="place-dot" style="background:#16A085"></span><span class="place-name">Ilha de Páscoa</span><span class="place-country">Chile</span></li>
+        <li class="place-item"><span class="place-dot" style="background:#C0392B"></span><span class="place-name">Granada</span><span class="place-country">Espanha</span></li>
+      </ul>
+    </div>
+    <div class="map-canvas">
+      <svg viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block">
+        <rect width="900" height="480" fill="#d6d0c4"/>
+        <path d="M430 80 L480 75 L500 85 L510 100 L500 120 L480 125 L460 120 L440 110 L430 95 Z" fill="#c8c2b6" stroke="#bab4a8" stroke-width="0.5"/>
+        <path d="M450 130 L510 125 L540 140 L550 180 L545 240 L520 280 L490 290 L465 270 L450 220 L445 170 Z" fill="#c8c2b6" stroke="#bab4a8" stroke-width="0.5"/>
+        <path d="M100 60 L220 55 L240 70 L235 120 L200 150 L160 160 L130 145 L100 120 L90 90 Z" fill="#c8c2b6" stroke="#bab4a8" stroke-width="0.5"/>
+        <path d="M180 200 L240 195 L265 220 L270 280 L255 330 L230 360 L200 355 L175 320 L165 265 L170 220 Z" fill="#c8c2b6" stroke="#bab4a8" stroke-width="0.5"/>
+        <path d="M510 60 L720 55 L760 80 L770 120 L730 150 L650 155 L580 145 L530 130 L510 105 Z" fill="#c8c2b6" stroke="#bab4a8" stroke-width="0.5"/>
+        <path d="M680 280 L760 275 L790 295 L785 340 L750 360 L700 355 L675 330 L670 300 Z" fill="#c8c2b6" stroke="#bab4a8" stroke-width="0.5"/>
+        <path d="M730 100 L745 90 L755 100 L748 115 L735 115 Z" fill="#c8c2b6" stroke="#bab4a8" stroke-width="0.5"/>
+        <ellipse cx="170" cy="320" rx="8" ry="6" fill="#c8c2b6" stroke="#bab4a8" stroke-width="0.5"/>
+        <g stroke="#c84b2f" stroke-width="1" stroke-dasharray="4,4" opacity="0.35" fill="none">
+          <line x1="468" y1="95" x2="222" y2="310"/>
+          <line x1="468" y1="95" x2="488" y2="155"/>
+          <line x1="468" y1="95" x2="738" y2="105"/>
+          <line x1="222" y1="310" x2="170" y2="320"/>
+        </g>
+        <g><circle cx="448" cy="92" r="7" fill="#2D6A9F" stroke="white" stroke-width="2"/><circle cx="448" cy="92" r="12" fill="#2D6A9F" opacity="0.2"/></g>
+        <g><circle cx="215" cy="330" r="7" fill="#7B9E4E" stroke="white" stroke-width="2"/><circle cx="215" cy="330" r="12" fill="#7B9E4E" opacity="0.2"/></g>
+        <g><circle cx="455" cy="148" r="7" fill="#C84B2F" stroke="white" stroke-width="2"/><circle cx="455" cy="148" r="12" fill="#C84B2F" opacity="0.2"/></g>
+        <g><circle cx="738" cy="105" r="7" fill="#9B59B6" stroke="white" stroke-width="2"/><circle cx="738" cy="105" r="12" fill="#9B59B6" opacity="0.2"/></g>
+        <g><circle cx="222" cy="282" r="7" fill="#E67E22" stroke="white" stroke-width="2"/><circle cx="222" cy="282" r="12" fill="#E67E22" opacity="0.2"/></g>
+        <g><circle cx="170" cy="320" r="7" fill="#16A085" stroke="white" stroke-width="2"/><circle cx="170" cy="320" r="12" fill="#16A085" opacity="0.2"/></g>
+        <g><circle cx="462" cy="100" r="7" fill="#C0392B" stroke="white" stroke-width="2"/><circle cx="462" cy="100" r="12" fill="#C0392B" opacity="0.2"/></g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="sobre" class="about-section">
+  <div class="about-inner">
+    <div style="position:relative">
+      <div class="about-photo"><div class="about-photo-inner">🧳</div></div>
+      <div class="about-badge">
+        <span class="about-badge-num">23</span>
+        <span class="about-badge-text">países visitados</span>
+      </div>
+    </div>
+    <div class="about-text">
+      <p class="about-kicker">Sobre mim</p>
+      <h2>Viajante por necessidade, escritor por acidente</h2>
+      <p>Comecei a viajar porque precisava de ar. Comecei a escrever porque não queria esquecer. Hoje o blog é o meu diário aberto — misturando os meus relatos com os de amigos que compartilham a mesma compulsão por pegar estradas.</p>
+      <p>Acredito que viajar não é sobre o destino, mas sobre quem você encontra no caminho.</p>
+      <div class="about-tags">
+        <span class="tag">Viagem solo</span>
+        <span class="tag">Mochilão</span>
+        <span class="tag">Gastronomia</span>
+        <span class="tag">Fotografia</span>
+        <span class="tag">América do Sul</span>
+        <span class="tag">Ásia</span>
+        <span class="tag">Europa</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">Er<span>rante</span></div>
+  <p>© 2025 Traveltips — Feito para nós desbravadores</p>
+</footer>
+
+<script src="traveltips.js"></script>
+
+
+</script>
+</body>
+</html>
